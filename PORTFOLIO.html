@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Muqtaar Ahmed | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: .3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #38bdf8;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: .15;
+            animation: glowMove 8s infinite alternate;
+        }
+
+        @keyframes glowMove {
+            from {
+                transform: translate(-100px, -50px);
+            }
+
+            to {
+                transform: translate(100px, 50px);
+            }
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            box-shadow: 0 0 30px rgba(56, 189, 248, .7);
+            margin-bottom: 20px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            color: #facc15;
+            height: 40px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #38bdf8;
+            color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #38bdf8;
+        }
+
+        .project-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #38bdf8;
+            color: black;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .project-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #38bdf8;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #38bdf8;
+            font-size: 32px;
+        }
+
+        .about {
+            background: #111827;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(56, 189, 248, .6);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(56, 189, 248, .5);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            transition: .3s;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(56, 189, 248, .5);
+        }
+
+        .education {
+            background: #111827;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact i {
+            font-size: 30px;
+            margin: 15px;
+            color: #38bdf8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111827;
+        }
+
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #experience {
+                padding: 80px 10%;
+                background: #111827;
+            }
+
+            #experience .project {
+                background: #1e293b;
+                padding: 25px;
+                border-radius: 15px;
+                margin-top: 20px;
+            }
+
+            #experience h3 {
+                color: #38bdf8;
+                margin-bottom: 10px;
+            }
+
+            #experience h4 {
+                color: #facc15;
+                margin-bottom: 15px;
+            }
+
+            #experience ul {
+                margin-left: 20px;
+                line-height: 1.8;
+            }
+        }
+            /* Dashboard Section */
+
+#dashboard{
+    padding:100px 8%;
+    background:#111827;
+    text-align:center;
+}
+
+.dashboard-subtitle{
+    color:#cbd5e1;
+    margin-top:-10px;
+    margin-bottom:35px;
+    font-size:18px;
+}
+
+.dashboard-box{
+
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.dashboard-image{
+
+    width:60%;
+    max-width:650px;
+
+    border-radius:15px;
+
+    border:3px solid #38bdf8;
+
+    box-shadow:0 0 30px rgba(56,189,248,.45);
+
+    transition:.4s;
+
+}
+
+.dashboard-image:hover{
+
+    transform:scale(1.01);
+
+}
+
+.dashboard-content{
+
+    max-width:800px;
+
+    margin:45px auto 0;
+
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 20px rgba(56,189,248,.2);
+
+}
+
+.dashboard-content h3{
+
+    color:#38bdf8;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+.dashboard-content p{
+
+    line-height:1.9;
+
+    color:#d1d5db;
+
+    font-size:18px;
+
+    text-align:justify;
+
+}
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Muqtaar Ahmed</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero" id="home">
+        <div> <img src="/profile.jpeg" alt="Profile Photo" class="profile-img">
+            <h1>Hi, I'm <span>Mohammed Muqtaar Ahmed</span></h1>
+            <h2 id="typing"></h2>
+            <p><B> I am an AI Engineer and Data Analyst passionate about developing intelligent solutions and
+                    transforming data into meaningful insights. With expertise in Python, SQL, Power BI, Data
+                    Visualization, and Artificial Intelligence, I enjoy solving real-world problems through data-driven
+                    decision-making and innovative technologies.</B> </p> <a href="#projects" class="btn">Explore
+                Projects</a>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p> Results-oriented Data Analyst with expertise in data interpretation, statistical modeling, business
+                intelligence, and data visualization. Skilled in Python, SQL, Power BI, and advanced analytics
+                techniques. Passionate about leveraging data to solve business challenges, improve efficiency, and
+                create measurable value.<br>Data Analyst | Business Intelligence Enthusiast | Transforming Data into
+                Actionable Insights 📊🚀 </p>
+        </div>
+    </section>
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">EXCEL</div>
+            <div class="skill">MY SQL</div>
+            <div class="skill">TABLEAU</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">PYTHON FOR DATA ANALYSIS</div>
+            <div class="skill">WEB DEVELOPMENT FOR DATA ANALYSIS</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Probability and Statistics</div>
+        </div>
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="project">
+                <h3>AI Intern</h3>
+                <h4>Codec Technologies | India</h4> <br>
+                <h4>Hands-Free Virtual Mouse</h4>
+                <ul>
+                    <li>Developed a computer vision-based system using OpenCV and NumPy to control mouse functions
+                        through facial expressions and eye movements.</li>
+                    <li>Enabled cursor movement, left-click, right-click, and scrolling without physical hardware.</li>
+                    <li>Built an accessible solution for physically disabled users using only a webcam.</li>
+                    <li>Eliminated the need for external devices such as sensors or electrodes, making the system
+                        cost-effective and user-friendly.</li>
+                    <li>Applied Artificial Intelligence and Computer Vision techniques to enhance human-computer
+                        interaction.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Data Analytics Certification</h3>
+                    <p> Completed professional training in Data Analytics, Data Visualization, Dashboard Development,
+                        and Business Intelligence. </p>
+                </div>
+                <div class="project">
+                    <h3>Python Programming Certification</h3>
+                    <p> Demonstrated proficiency in Python programming, data manipulation, automation, and analytical
+                        problem-solving. </p>
+                </div>
+                <div class="project">
+                    <h3>Artificial Intelligence Internship Certificate</h3>
+                    <p> Successfully completed AI Internship at Codec Technologies, gaining practical experience in
+                        Artificial Intelligence and Computer Vision. </p>
+                </div>
+                <div class="project">
+                    <h3>Full Stack Development Certification</h3>
+                    <p> Acquired skills in front-end and back-end web development technologies for building responsive
+                        web applications. </p>
+                </div>
+                <div class="project">
+                    <h3>Desktop Publishing (DTP) Certification</h3>
+                    <p> Developed expertise in document design, typography, page layout, and professional digital
+                        publishing tools. </p>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Hands-Free Virtual Mouse</h3> <br>
+                    <p> Developed a computer vision-based virtual mouse using OpenCV and NumPy to control cursor
+                        movement, clicking, and scrolling through facial expressions and eye tracking. </p> <a
+                        href="https://github.com/Raza011-design/handsfree-mouse-control1-" target="_blank"
+                        class="project-btn"> <i class="fab fa-github"></i> View Project </a>
+                </div>
+                <div class="project">
+                    <h3>E-Commerce Database Design</h3> <br>
+                    <p> Designed and implemented a scalable relational database system for managing products, customers,
+                        and orders while maintaining data integrity and performance. </p> <a
+                        href="https://github.com/Raza011-design/Capstone-Project---Database-Design-for-an-E-commerce-Store.git"
+                        target="_blank" class="project-btn"> <i class="fab fa-github"></i> View Project </a>
+                </div>
+                <div class="project">
+                    <h3>Gurgaon Real Estate Analysis</h3> <br>
+                    <p> Analyzed Gurgaon property market trends using Python, data visualization, and exploratory data
+                        analysis techniques to uncover market insights. </p> <a
+                        href="https://github.com/Raza011-design/Real-Estate-Analysis.git" target="_blank"
+                        class="project-btn"> <i class="fab fa-github"></i> View Project </a>
+                </div>
+            </div>
+        </section>
+    <section id="dashboard">
+
+    <h2 class="section-title">ClipKart Sales Performance Dashboard</h2>
+
+    <p class="dashboard-subtitle">
+        Interactive Power BI Dashboard for analyzing revenue, sales performance,
+        orders, product categories, city-wise performance, and business KPIs.
+    </p>
+
+    <div class="dashboard-box">
+
+        <img src="dashboard.jpeg"
+             alt="ClipKart Sales Performance Dashboard"
+             class="dashboard-image">
+
+    </div>
+
+    <div class="dashboard-content">
+
+        <h3>Project Overview</h3>
+
+        <p>
+            This Power BI dashboard was developed to analyze the sales performance of
+            ClipKart using interactive visualizations and key business metrics.
+            It provides insights into Total Revenue, Orders, Quantity Sold,
+            Monthly Revenue Trends, City-wise Sales, Product Performance,
+            Category Distribution, and Price vs Revenue analysis.
+
+            The dashboard enables businesses to monitor performance,
+            identify high-performing products and regions,
+            understand customer purchasing trends,
+            and support data-driven business decisions through
+            interactive reports and KPIs.
+        </p>
+
+    </div>
+
+</section>
+        <section id="education" class="education">
+            <h2 class="section-title">Education</h2>
+            <div class="card">
+                <h3>B.E – Artificial Intelligence & Machine Learning</h3> <br>
+                <p> Nawab Shah Alam Khan College of Engineering & Technology<br> Affiliated to Osmania University<br>
+                    2022 – 2026 | Completed </p>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <p> <b>Email:</b> <a href="mailto:mohdmuqtarahmed66@gmail.com" style="color:#38bdf8;text-decoration:none;">
+                    mohdmuqtarahmed66@gmail.com </a> </p> <br> <a href="https://github.com/Raza011-design"
+                target="_blank"> <i class="fab fa-github"></i> </a> <a href="mailto:mohdmuqtarahmed66@gmail.com"> <i
+                    class="fas fa-envelope"></i> </a>
+        </section>
+        <footer>
+            <p>© 2026 Mohammed Muqtaar Ahmed</p>
+            <p> AI Engineer • Data Analyst </p>
+        </footer>
+        <script> const roles = ["AI Engineer", "Data Analyst"]; let roleIndex = 0; let charIndex = 0; function typeEffect() { let currentRole = roles[roleIndex]; if (charIndex <= currentRole.length) { document.getElementById("typing").textContent = currentRole.substring(0, charIndex); charIndex++; setTimeout(typeEffect, 120); } else { setTimeout(() => { charIndex = 0; roleIndex = (roleIndex + 1) % roles.length; typeEffect(); }, 1500); } } typeEffect(); </script>
+</body>
+
+</html>
