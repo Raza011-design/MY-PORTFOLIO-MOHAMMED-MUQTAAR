@@ -9,6 +9,6 @@ A responsive portfolio website showcasing my skills, projects, and certification
 
 
 ## Live Demo
-(https://mohammedmuqtaarportfolio.netlify.app)
+https://muhammedmuqtar-portfolio.netlify.app/
 
 
