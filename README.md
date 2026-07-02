@@ -7,8 +7,6 @@ A responsive portfolio website showcasing my skills, projects, and certification
 - CSS
 - JavaScript
 
-## Featured Project
-📊 ClipKart Sales Performance Dashboard
 
 ## Live Demo
 (https://mohammedmuqtaarportfolio.netlify.app)
