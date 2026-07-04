@@ -386,6 +386,46 @@
     font-size:20px;
     margin:20px auto;
 }
+.contact{
+    background:#111827;
+    text-align:center;
+    padding:100px 8%;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:40px auto 0;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px 20px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:#fff;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border:2px solid #38bdf8;
+    box-shadow:0 0 10px rgba(56,189,248,.4);
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+    width:100%;
+}
         
     </style>
 </head>
@@ -427,16 +467,49 @@
     </section>
     <section id="skills">
         <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">EXCEL</div>
-            <div class="skill">MY SQL</div>
-            <div class="skill">TABLEAU</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">PYTHON FOR DATA ANALYSIS</div>
-            <div class="skill">WEB DEVELOPMENT FOR DATA ANALYSIS</div>
-            <div class="skill">Git & GitHub</div>
-            <div class="skill">Probability and Statistics</div>
-        </div>
+       <div class="skills-grid">
+
+    <div class="skill">
+        <i class="fas fa-file-excel"></i>
+        <p>Excel</p>
+    </div>
+
+    <div class="skill">
+        <i class="fas fa-database"></i>
+        <p>MySQL</p>
+    </div>
+
+    <div class="skill">
+        <i class="fas fa-chart-pie"></i>
+        <p>Tableau</p>
+    </div>
+
+    <div class="skill">
+        <i class="fas fa-chart-line"></i>
+        <p>Power BI</p>
+    </div>
+
+    <div class="skill">
+        <i class="fab fa-python"></i>
+        <p>Python for Data Analysis</p>
+    </div>
+
+    <div class="skill">
+        <i class="fas fa-code"></i>
+        <p>Web Development for Data Analysis</p>
+    </div>
+
+    <div class="skill">
+        <i class="fab fa-github"></i>
+        <p>Git & GitHub</p>
+    </div>
+
+    <div class="skill">
+        <i class="fas fa-calculator"></i>
+        <p>Probability & Statistics</p>
+    </div>
+
+</div>
         <section id="experience">
             <h2 class="section-title">Professional Experience</h2>
             <div class="project">
@@ -461,7 +534,7 @@
 <div class="projects">
 
     <div class="project">
-        <i class="fas fa-file-pdf" style="font-size:10px;color:#ff4d4d;"></i>
+        
         <h3>Data Analytics Certification</h3>
         <a href="Ultimate_Job-Ready_AI-Powered_Data_Analytics_Course__Certificate (1).pdf"
            target="_blank"
@@ -471,7 +544,7 @@
     </div>
 
     <div class="project">
-        <i class="fas fa-file-pdf" style="font-size:10px;color:#ff4d4d;"></i>
+        
         <h3>Python Programming Certification</h3>
         <a href="[English]_Complete_2026_Python_Bootcamp__Learn_Python_from_Scratch_Certificate (1).pdf"
            target="_blank"
@@ -481,7 +554,7 @@
     </div>
 
     <div class="project">
-        <i class="fas fa-file-pdf" style="font-size:10px;color:#ff4d4d;"></i>
+       
         <h3>AI Internship Certificate</h3>
         <a href="/Mohammad Muqtaar Ahmed  - Internship Certificate.pdf"
            target="_blank"
@@ -491,7 +564,7 @@
     </div>
 
     <div class="project">
-        <i class="fas fa-file-pdf" style="font-size:10px;color:#ff4d4d;"></i>
+        
         <h3>Full Stack Development</h3>
         <a href="FSD.pdf"
            target="_blank"
@@ -501,7 +574,7 @@
     </div>
 
     <div class="project">
-        <i class="fas fa-file-pdf" style="font-size:10px;color:#ff4d4d;"></i>
+        
         <h3>DTP Certification</h3>
         <a href="GD.pdf"
            target="_blank"
@@ -584,6 +657,26 @@
                 <p> Nawab Shah Alam Khan College of Engineering & Technology<br> Affiliated to Osmania University<br>
                     2022 – 2026 | Completed </p>
             </div>
+            <section id="contact" class="contact">
+
+    <h2 class="section-title">Contact Form</h2>
+
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="6e07bf3e-6b95-42f0-92cb-0df5c974a575">
+
+        <input type="text" name="name" placeholder="Full Name" required>
+
+        <input type="email" placeholder="Email Address" required>
+
+        <input type="text" name="city" placeholder="City" required>
+
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+
+    </form>
+
+</section>
         </section>
         <section id="contact" class="contact">
             <h2 class="section-title">Contact Me</h2>
